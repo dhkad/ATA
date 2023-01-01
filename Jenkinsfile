@@ -2,6 +2,11 @@ pipeline{
 
 	agent any
 	stages{
+	stage('Checkout code') {
+        	steps {
+           	checkout scm
+        }
+    }
 	stage("Compile stage"){
 		steps{
 		withMaven(maven: 'maven_3_5_0){
