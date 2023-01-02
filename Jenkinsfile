@@ -9,12 +9,12 @@ pipeline{
     }
 	stage("Compile stage"){
 		steps{
-		 withMaven(maven: 'maven_3_8_6') {
+		 withMaven(maven: 'maven_3_8_4') {
                     sh 'mvn clean install'
 		 }}}
 	stage("Test stage"){
 		steps{
-		withMaven(maven: 'maven_3_8_6'){
+		withMaven(maven: 'maven_3_8_4'){
 		sh'mvn test'}}}
 	stage("Cucumber Report"){
 		steps{
