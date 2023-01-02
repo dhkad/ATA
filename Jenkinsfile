@@ -14,7 +14,7 @@ pipeline{
 		 }}}
 	stage("Test stage"){
 		steps{
-		withMaven(maven: 'maven_3_5_0){
+		withMaven(maven: 'maven_3_8_6){
 		sh'mvn test'}}}
 	stage("Cucumber Report){
 		steps{
