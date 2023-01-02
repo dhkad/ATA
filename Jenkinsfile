@@ -16,7 +16,7 @@ pipeline{
 		steps{
 		withMaven(maven: 'maven_3_8_6'){
 		sh'mvn test'}}}
-	stage("Cucumber Report){
+	stage("Cucumber Report"){
 		steps{
 			cucumber buildStatus: "UNSTABLE",
 			fileIncludePatern:"**/cucumber.json",
