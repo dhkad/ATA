@@ -47,6 +47,7 @@ pipeline{
         	extensions: [[$class: 'CloneOption', timeout: 120]],
         	gitTool: 'Default', 
         	userRemoteConfigs: [[url: 'https://github.com/dhkad/ATA.git']]
+			 ]) 
 		cucumber buildStatus: "UNSTABLE",
 		fileIncludePattern: "**/cucumber.json",
                 jsonReportDirectory: 'target'}}
