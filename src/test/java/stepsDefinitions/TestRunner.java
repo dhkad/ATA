@@ -10,13 +10,12 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty", "html:target/cucumber"},
+		 plugin = {"json:target/cucumber/cucumber.json"},
 
 
 		monochrome = true,
 		features = "src/test/resources/features"
-		,glue={"stepsDefinitions"},
-		format{'json:target/cucumber.json'}
+		,glue={"stepsDefinitions"}
 		)
 
 public class TestRunner {
