@@ -1,6 +1,12 @@
 pipeline{
 
 	agent any
+	tools { 
+        maven 'Maven 3.4.8' 
+        jdk 'jdk11.0.16.1' 
+       }
+	
+	
 	stages{
 	stage('Checkout code') {
         	steps {
@@ -14,6 +20,11 @@ pipeline{
            	checkout scm
         }
     }
+		
+	stage("Test stage"){
+	steps{
+	withMaven(maven: 'maven_3_8_0){
+	sh'mvn test'}}}
 	
 			  
 	
