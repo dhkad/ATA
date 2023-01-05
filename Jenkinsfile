@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.8.6'
-        jdk 'jdk11.0.16.1'
+        maven 'apache-maven-3.8.6'
+        jdk 'JAVA_HOME'
     }
     stages {
 	stage('Checkout code') {
@@ -20,7 +20,7 @@ pipeline {
 		
 	stage("Test stage"){
 	steps{
-	withMaven(maven: 'maven_3_8_6'){
+	withMaven(maven: 'apache-maven-3.8.6'){
 	sh'mvn test'}}}
 	
 			  
