@@ -1,13 +1,10 @@
-pipeline{
-
-	agent any
-	tools { 
-        maven 'Maven 3.4.8' 
-        jdk 'jdk11.0.16.1' 
-       }
-	
-	
-	stages{
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.8.0'
+        jdk 'jdk11.0.16.1'
+    }
+    stages {
 	stage('Checkout code') {
         	steps {
 		// Get some code from a GitHub repository
