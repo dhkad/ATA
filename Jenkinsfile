@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.8.0'
+        maven 'Maven 3.8.6'
         jdk 'jdk11.0.16.1'
     }
     stages {
@@ -20,7 +20,7 @@ pipeline {
 		
 	stage("Test stage"){
 	steps{
-	withMaven(maven: 'maven_3_8_0'){
+	withMaven(maven: 'maven_3_8_6'){
 	sh'mvn test'}}}
 	
 			  
