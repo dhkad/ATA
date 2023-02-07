@@ -26,11 +26,7 @@ public class LoginPage {
 		return driver.getTitle();
 	}
 
-	/*
-	 * public void clickOnuserFigure() { driver.findElement(personfigure).click(); }
-	 * 
-	 * public void clickOnLogin1() { driver.findElement(logInButton1).click(); }
-	 */
+	
 
 	public void enterUserName(String username) {
 		driver.findElement(userId).sendKeys(username);
